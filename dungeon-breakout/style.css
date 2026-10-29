@@ -1,0 +1,41 @@
+/* Dungeon Breakout site: the game's UI palette (game/scripts/ui.gd). No external fonts, scripts or trackers. */
+:root {
+  --bg: #120f17;
+  --stone: #2b293a;
+  --stone-light: #45405a;
+  --ink: #f2ede0;
+  --dim: #ada8b8;
+  --gold: #f5c75c;
+  --bad: #ed5c54;
+  --black: #080608;
+}
+* { box-sizing: border-box; }
+html { color-scheme: dark; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font: 17px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+a { color: var(--gold); text-underline-offset: 2px; }
+a:hover, a:focus-visible { color: #fee03d; }
+.bar { padding: 14px 16px; border-bottom: 2px solid var(--black); background: var(--stone); }
+.brand { color: var(--gold); font-weight: 700; letter-spacing: .03em; text-decoration: none; }
+.doc, .hero { max-width: 44rem; margin: 0 auto; padding: 24px 16px 40px; }
+h1 { color: var(--gold); line-height: 1.2; margin: .4em 0 .6em; }
+h2 { margin: 1.8em 0 .4em; padding-bottom: .2em; border-bottom: 2px solid var(--stone-light); }
+p, li { overflow-wrap: anywhere; }
+li { margin: .3em 0; }
+code { background: var(--stone); padding: .05em .35em; border-radius: 4px; }
+mark.todo { background: var(--bad); color: var(--black); font-weight: 700; padding: 0 .3em; border-radius: 3px; }
+.tag { color: var(--dim); font-size: 1.1rem; margin-top: 0; }
+.links { list-style: none; padding: 0; margin: 28px 0; display: grid; gap: 12px; }
+.links a, .links span {
+  display: block; padding: 12px 16px; border: 2px solid var(--black); border-radius: 8px;
+  background: var(--stone); text-decoration: none; font-weight: 600;
+}
+.links a { color: var(--gold); }
+.links a:hover, .links a:focus-visible { background: var(--stone-light); }
+.links .soon { color: var(--dim); font-weight: 400; border-style: dashed; border-color: var(--stone-light); background: transparent; }
+.foot { max-width: 44rem; margin: 0 auto; padding: 16px; color: var(--dim); font-size: .9rem; border-top: 2px solid var(--stone); }
+.foot a { color: var(--dim); }
